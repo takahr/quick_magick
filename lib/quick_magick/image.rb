@@ -355,7 +355,7 @@ module QuickMagick
     # You can use 0,0 for the image size, which means to use the actual dimensions found in the image header.
     # Otherwise, it is scaled to the given dimensions. See -compose for a description of the composite operators.
     def draw_image(operator, x0, y0, w, h, image_filename, options={})
-      append_to_operators("draw", "#{options_to_str(options)} image #{operator} #{x0},#{y0} #{w},#{h} \"#{image_filename}\"")
+      append_to_operators("draw", "#{options_to_str(options)} image #{operator} #{x0},#{y0} #{w},#{h} \\\"#{image_filename}\\\"")
     end
     
     # Use text to annotate an image with text. Follow the text coordinates with a string.
